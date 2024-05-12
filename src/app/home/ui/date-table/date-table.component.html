@@ -1,0 +1,25 @@
+<div class="overflow-x-auto">
+    <table class="table">
+      <tbody>
+        @if (epochDateTime) {
+        <tr>
+            <th>Unix Timestamp</th>
+            <td>{{epochDateTime}}</td>
+        </tr>
+        }
+
+        <tr>
+          <th>GMT</th>
+          <td>{{gmtEpochDateTime}}</td>
+        </tr>
+        <tr>
+          <th>Current Time Zone</th>
+          <td>{{timeZoneEpochDateTime}}</td>
+        </tr>
+        <tr>
+          <th>Relative</th>
+          <td>{{relativeEpochDateTime}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

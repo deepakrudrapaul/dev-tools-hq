@@ -1,0 +1,97 @@
+<ng-container>
+  <section class="p-8">
+    <div class="form-control">
+      <label for="year">Unix Timestamp</label>
+      <input
+        name="dateTime"
+        type="number"
+        [(ngModel)]="inputEpochTime"
+        placeholder="Enter timestamp"
+        class="input input-bordered w-full max-w-xs"
+      />
+    </div>
+    <button (click)="convertEpochToHumanDate()" class="btn btn-primary my-5">
+      Timestamp to Human Date
+    </button>
+    <div class="my-5">
+      <app-date-table
+        [gmtEpochDateTime]="gmtHumanDateTime"
+        [timeZoneEpochDateTime]="timeZoneHumanDateTime"
+        [relativeEpochDateTime]="relativeHumanDateTime"
+      />
+    </div>
+
+    <div class="flex gap-5">
+      <div class="form-control">
+        <label for="year">Year</label>
+        <input
+          name="year"
+          type="number"
+          [(ngModel)]="dateForm.year"
+          placeholder="YYYY"
+          class="input input-md input-bordered w-20"
+        />
+      </div>
+      <div class="form-control">
+        <label for="month">Month</label>
+        <input
+          name="month"
+          type="number"
+          [(ngModel)]="dateForm.month"
+          placeholder="MM"
+          class="input input-md input-bordered w-20"
+        />
+      </div>
+      <div class="form-control">
+        <label for="day">Day</label>
+        <input
+          name="day"
+          type="number"
+          [(ngModel)]="dateForm.day"
+          placeholder="DD"
+          class="input input-md input-bordered w-20"
+        />
+      </div>
+      <div class="form-control">
+        <label for="hour">Hour</label>
+        <input
+          name="hour"
+          type="number"
+          [(ngModel)]="dateForm.hour"
+          placeholder="HH"
+          class="input input-md input-bordered w-20"
+        />
+      </div>
+      <div class="form-control">
+        <label for="minutes">Minutes</label>
+        <input
+          name="minutes"
+          type="number"
+          [(ngModel)]="dateForm.minute"
+          placeholder="mm"
+          class="input input-md input-bordered w-20"
+        />
+      </div>
+      <div class="form-control">
+        <label for="seconds">Seconds</label>
+        <input
+          name="seconds"
+          type="number"
+          [(ngModel)]="dateForm.second"
+          placeholder="ss"
+          class="input input-md input-bordered w-20"
+        />
+      </div>
+    </div>
+    <button (click)="convertHumanToEpochDate()" class="btn btn-primary my-5">
+      Human Date to Timestamp
+    </button>
+
+    <app-date-table
+      [epochDateTime]="epochDateTime"
+      [gmtEpochDateTime]="gmtEpochDateTime"
+      [timeZoneEpochDateTime]="timeZoneEpochDateTime"
+      [relativeEpochDateTime]="relativeEpochDateTime"
+    />
+  </section>
+</ng-container>

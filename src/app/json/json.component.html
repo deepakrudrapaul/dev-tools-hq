@@ -1,0 +1,24 @@
+<ng-container>
+    <section class="p-8">
+        <div class="grid grid-cols-[1fr_100px_1fr] gap-8 items-center h-[90vh]">
+                <div class="form-control h-full">
+                    <label for="content">Input</label>
+                    <div class="border-2 flex-1 my-2">
+                        <textarea [(ngModel)]="inputJson" ngModel class="w-full large-text-area" 
+                        placeholder="Enter JSON here"></textarea>
+                    </div>
+                    
+                </div>
+                <div>
+                    <button (click)="formatJson()"  class="btn btn-primary">Format</button>
+                </div>
+                <div class="form-control h-full">
+                    <label for="content">Output</label>
+                    <div class="border-2 flex-1  my-2">
+                        <textarea readonly [(ngModel)]="outputJson" ngModel class="w-full  large-text-area" 
+                        placeholder="Your JSON will appear here"></textarea>
+                    </div>
+                </div>
+        </div>
+    </section>
+</ng-container>

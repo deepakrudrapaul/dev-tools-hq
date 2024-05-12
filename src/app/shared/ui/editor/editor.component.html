@@ -1,0 +1,6 @@
+<div class="editor">
+    <div #lineNumber class="line-numbers">
+        <span></span>
+    </div>
+    <textarea name="inputJson" [(ngModel)]="content" class="large-text-area" [disabled]="disabled" (keyup)="onChange($event)"  [placeholder]="placeholder"></textarea>
+</div>
